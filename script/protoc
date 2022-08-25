@@ -1,0 +1,4 @@
+#!/bin/sh
+
+
+protoc --go_out proto --twirp_out proto proto/api/v1/api.proto

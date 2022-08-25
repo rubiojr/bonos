@@ -1,0 +1,39 @@
+syntax = "proto3";
+package co.rbel.bonos.v1;
+option go_package = "api/v1";
+
+service Bonos {
+  rpc Remaining(EmptyReq) returns (RemainingResp);
+  rpc New(NewReq) returns (NewResp);
+  rpc Use(EmptyReq) returns (UseResp);
+  rpc Details(EmptyReq) returns (DetailsResp);
+  rpc Stamps(EmptyReq) returns (StampsResp);
+}
+
+message EmptyReq {}
+
+message RemainingResp {
+  uint32 remaining = 1;
+}
+
+message NewReq{
+  uint32 amount = 1;
+}
+
+message NewResp {
+  uint32 remaining = 1;
+  string created_at = 2; // RFC3339
+}
+
+message DetailsResp {
+  uint32 remaining = 1;
+  string created_at = 2; // RFC3339
+}
+
+message UseResp {
+  uint32 remaining = 1;
+}
+
+message StampsResp {
+  repeated string stamps = 1;
+}
