@@ -8,7 +8,7 @@ The service is a demo of how to build a simple real life application one step at
 
 * Docker
 * Protobuf/Twirp API
-* HMAC Authentication
+* JWT Authentication
 * A key/value store as the datastore
 
 `Bono(s)` in spanish means `pass`.
